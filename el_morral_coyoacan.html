@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Morral Coyoacán | Restaurante Mexicano en el Centro de Coyoacán</title>
+  <meta name="description" content="Restaurante El Morral Coyoacán: cocina mexicana familiar, enchiladas, tostadas, chile en nogada, café de olla y tortillas hechas a mano en el corazón de Coyoacán." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fff7ea;
+      --paper: #fbf1df;
+      --brown: #3b2518;
+      --brown-soft: #6b3d24;
+      --terracotta: #b84f2b;
+      --terracotta-dark: #8e341e;
+      --green: #2f5c3a;
+      --gold: #d9a441;
+      --white: #ffffff;
+      --muted: #756254;
+      --shadow: 0 24px 70px rgba(48, 28, 14, 0.18);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(217, 164, 65, .24), transparent 32%),
+        linear-gradient(180deg, #fff7ea 0%, #fbf1df 52%, #fff7ea 100%);
+      color: var(--brown);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .announcement {
+      background: var(--green);
+      color: var(--cream);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 247, 234, .88);
+      border-bottom: 1px solid rgba(59, 37, 24, .1);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--terracotta), var(--gold));
+      display: grid;
+      place-items: center;
+      color: var(--cream);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 10px 26px rgba(184, 79, 43, .3);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--brown-soft);
+    }
+
+    .nav-links a:hover {
+      color: var(--terracotta);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(184, 79, 43, .27);
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,.55);
+      color: var(--brown);
+      border-color: rgba(59, 37, 24, .18);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 82px 22px 56px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(47, 92, 58, .1);
+      color: var(--green);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", serif;
+      line-height: .96;
+      letter-spacing: -.04em;
+    }
+
+    h1 {
+      font-size: clamp(54px, 7vw, 92px);
+      max-width: 680px;
+    }
+
+    .hero p {
+      max-width: 590px;
+      margin: 24px 0 30px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 570px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(59, 37, 24, .1);
+      padding: 16px;
+      border-radius: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      color: var(--terracotta);
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 650px;
+      border-radius: 42px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(rgba(59, 37, 24, .08), rgba(59, 37, 24, .35)),
+        url("https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=1200&q=80") center/cover;
+    }
+
+    .floating-menu {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      background: rgba(255,247,234,.92);
+      backdrop-filter: blur(16px);
+      padding: 22px;
+      border-radius: 28px;
+      box-shadow: 0 16px 45px rgba(0,0,0,.18);
+    }
+
+    .floating-menu h3 {
+      font-size: 34px;
+      margin-bottom: 6px;
+    }
+
+    .floating-menu p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .dish-row {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .dish-mini {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 0;
+      border-top: 1px dashed rgba(59,37,24,.22);
+      font-weight: 800;
+    }
+
+    .dish-mini span {
+      color: var(--terracotta);
+    }
+
+    section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 74px 22px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(42px, 5vw, 66px);
+      max-width: 650px;
+    }
+
+    .section-header p {
+      max-width: 440px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-photo {
+      border-radius: var(--radius);
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(48, 28, 14, .08), rgba(48, 28, 14, .26)),
+        url("https://images.unsplash.com/photo-1625166917472-98d7f1fb8c0a?auto=format&fit=crop&w=1200&q=80") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card {
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(59, 37, 24, .1);
+      border-radius: var(--radius);
+      padding: 34px;
+    }
+
+    .about-card h3 {
+      font-size: 44px;
+      margin-bottom: 18px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .feature {
+      background: var(--paper);
+      border-radius: 18px;
+      padding: 16px;
+      font-weight: 800;
+      color: var(--brown-soft);
+    }
+
+    .menu-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .tab {
+      border: 1px solid rgba(59, 37, 24, .16);
+      background: rgba(255,255,255,.65);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: var(--brown-soft);
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: var(--brown);
+      color: var(--cream);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .menu-card {
+      background: rgba(255,255,255,.7);
+      border: 1px solid rgba(59, 37, 24, .1);
+      border-radius: 26px;
+      padding: 22px;
+      transition: .25s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(48, 28, 14, .12);
+    }
+
+    .menu-card .tag {
+      display: inline-block;
+      background: rgba(184, 79, 43, .12);
+      color: var(--terracotta-dark);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .menu-card h3 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 15px;
+      min-height: 72px;
+    }
+
+    .price {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      color: var(--terracotta);
+    }
+
+    .price small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 16px;
+    }
+
+    .gallery div {
+      min-height: 260px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .gallery div:nth-child(1) {
+      grid-row: span 2;
+      background: url("https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=1000&q=80") center/cover;
+    }
+
+    .gallery div:nth-child(2) {
+      background: url("https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=900&q=80") center/cover;
+    }
+
+    .gallery div:nth-child(3) {
+      background: url("https://images.unsplash.com/photo-1625938145744-e38051539995?auto=format&fit=crop&w=900&q=80") center/cover;
+    }
+
+    .gallery div:nth-child(4) {
+      background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80") center/cover;
+    }
+
+    .gallery div:nth-child(5) {
+      background: url("https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80") center/cover;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review {
+      background: rgba(255,255,255,.7);
+      border: 1px solid rgba(59, 37, 24, .1);
+      border-radius: 26px;
+      padding: 24px;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .review p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .review strong {
+      color: var(--brown);
+    }
+
+    .location {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .info-card {
+      background: var(--brown);
+      color: var(--cream);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h2 {
+      font-size: 54px;
+      margin-bottom: 22px;
+    }
+
+    .info-item {
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+
+    .info-item span {
+      display: block;
+      color: rgba(255,247,234,.68);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 520px;
+      box-shadow: var(--shadow);
+      border: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--paper);
+    }
+
+    .cta {
+      margin: 60px 22px 80px;
+      max-width: none;
+      background:
+        linear-gradient(rgba(47, 92, 58, .88), rgba(47, 92, 58, .9)),
+        url("https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1600&q=80") center/cover;
+      border-radius: 40px;
+      color: var(--cream);
+      text-align: center;
+      padding: 76px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(44px, 6vw, 76px);
+      max-width: 860px;
+      margin: 0 auto 18px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      color: rgba(255,247,234,.82);
+      font-size: 18px;
+    }
+
+    footer {
+      background: var(--brown);
+      color: var(--cream);
+      padding: 34px 22px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      color: rgba(255,247,234,.68);
+      font-size: 14px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: 0;
+      font-size: 30px;
+      color: var(--brown);
+      cursor: pointer;
+    }
+
+    @media (max-width: 930px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 16px;
+        right: 16px;
+        background: var(--cream);
+        border: 1px solid rgba(59,37,24,.12);
+        border-radius: 22px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero,
+      .about-grid,
+      .location {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .hero-card {
+        min-height: 520px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header p {
+        margin-top: 18px;
+      }
+
+      .menu-grid,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery div:nth-child(1) {
+        grid-row: auto;
+      }
+
+      .stats,
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .brand div:last-child {
+        font-size: 14px;
+      }
+
+      .hero-card {
+        min-height: 480px;
+      }
+
+      .floating-menu {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      section {
+        padding: 54px 18px;
+      }
+
+      .about-card,
+      .info-card {
+        padding: 24px;
+      }
+
+      .cta {
+        margin: 40px 14px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Abierto desde las 9:00 a.m. · Cocina mexicana familiar en el corazón de Coyoacán
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="#inicio" class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          El Morral
+          <small>Centro de Coyoacán</small>
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#historia">Historia</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="btn btn-primary" href="tel:+525555540298">Llamar ahora</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <div class="eyebrow">Restaurante mexicano · Coyoacán</div>
+        <h1>Sabor mexicano con alma de barrio.</h1>
+        <p>
+          En El Morral Centro de Coyoacán se disfruta la cocina mexicana familiar:
+          enchiladas, tostadas, chilaquiles, cecina, chile en nogada, café de olla
+          y tortillas hechas a mano, en una plaza adoquinada con ambiente tradicional.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Ver menú destacado</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+El+Morral+Centro+de+Coyoacan" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>4.4 ★</strong>
+            <span>Calificación en Google</span>
+          </div>
+          <div class="stat">
+            <strong>5,822+</strong>
+            <span>Reseñas de clientes</span>
+          </div>
+          <div class="stat">
+            <strong>$200–300</strong>
+            <span>Promedio por persona</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Comida mexicana tradicional">
+        <div class="floating-menu">
+          <h3>Imperdibles de la casa</h3>
+          <p>Platillos mexicanos preparados con sazón casero y servicio familiar.</p>
+          <div class="dish-row">
+            <div class="dish-mini">Chile en nogada <span>Popular</span></div>
+            <div class="dish-mini">Café de olla <span>Favorito</span></div>
+            <div class="dish-mini">Cecina con tortillas <span>Recomendado</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="section-header">
+        <h2>Un rincón mexicano en el centro histórico de Coyoacán.</h2>
+        <p>
+          Ideal para desayunar, comer en familia o disfrutar una tarde en una de las zonas
+          más emblemáticas de la Ciudad de México.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo"></div>
+        <div class="about-card">
+          <h3>Tradición, sabor y ambiente familiar.</h3>
+          <p>
+            El Morral es un restaurante mexicano reconocido por su comida casera, atención
+            amable y ambiente cálido. Su propuesta reúne platos tradicionales, desayunos,
+            comidas completas, postres y bebidas mexicanas.
+          </p>
+          <p>
+            Ubicado en Ignacio Allende 2, en la colonia Del Carmen, el restaurante se encuentra
+            en una zona perfecta para turistas, familias y visitantes que buscan vivir Coyoacán
+            a través de su gastronomía.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature">✓ Consumo en el lugar</div>
+            <div class="feature">✓ Para llevar</div>
+            <div class="feature">✓ Entrega a domicilio</div>
+            <div class="feature">✓ Mesas al aire libre</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-header">
+        <h2>Menú destacado</h2>
+        <p>
+          Selección de platillos mencionados por clientes y visitantes. Los precios pueden
+          variar; promedio reportado: $200–300 MXN por persona.
+        </p>
+      </div>
+
+      <div class="menu-tabs" aria-label="Categorías del menú">
+        <button class="tab active" data-category="todos">Todos</button>
+        <button class="tab" data-category="desayunos">Desayunos</button>
+        <button class="tab" data-category="comidas">Comidas</button>
+        <button class="tab" data-category="bebidas">Bebidas</button>
+        <button class="tab" data-category="postres">Postres</button>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card" data-category="comidas">
+          <span class="tag">Popular</span>
+          <h3>Chile en nogada</h3>
+          <p>Platillo mexicano tradicional, uno de los favoritos de los visitantes.</p>
+          <div class="price"><small>Platillo destacado</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="bebidas">
+          <span class="tag">Favorito</span>
+          <h3>Café de olla</h3>
+          <p>Café mexicano aromático, ideal para acompañar desayunos y pan dulce.</p>
+          <div class="price"><small>Bebida caliente</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="desayunos">
+          <span class="tag">Desayuno</span>
+          <h3>Chilaquiles</h3>
+          <p>Clásico desayuno mexicano con salsa, crema, queso y acompañamientos.</p>
+          <div class="price"><small>Recomendado</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="comidas">
+          <span class="tag">Tradicional</span>
+          <h3>Cecina</h3>
+          <p>Cecina servida con guarniciones y tortillas hechas a mano.</p>
+          <div class="price"><small>Comida mexicana</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="comidas">
+          <span class="tag">Entrada</span>
+          <h3>Sopa de tortilla</h3>
+          <p>Una entrada mexicana cálida, crujiente y llena de sabor.</p>
+          <div class="price"><small>Entrada</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="desayunos">
+          <span class="tag">Casero</span>
+          <h3>Huevos con salsa</h3>
+          <p>Huevos preparados con salsa roja o verde, acompañados al estilo mexicano.</p>
+          <div class="price"><small>Desayuno</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="bebidas">
+          <span class="tag">Refrescante</span>
+          <h3>Horchata</h3>
+          <p>Bebida fresca perfecta para acompañar platillos mexicanos.</p>
+          <div class="price"><small>Agua fresca</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="postres">
+          <span class="tag">Dulce</span>
+          <h3>Postres de la casa</h3>
+          <p>Opciones dulces para cerrar la comida con sabor tradicional.</p>
+          <div class="price"><small>Postre</small><span>Consultar</span></div>
+        </article>
+
+        <article class="menu-card" data-category="comidas">
+          <span class="tag">Familiar</span>
+          <h3>Tostadas y enchiladas</h3>
+          <p>Especialidades mexicanas para compartir en familia o con amigos.</p>
+          <div class="price"><small>Especialidad</small><span>Consultar</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="section-header">
+        <h2>Ambiente de Coyoacán</h2>
+        <p>
+          Una experiencia pensada para disfrutar comida mexicana en una ubicación turística,
+          familiar y con mucho movimiento.
+        </p>
+      </div>
+
+      <div class="gallery" aria-label="Galería de comida mexicana">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+
+    <section id="resenas">
+      <div class="section-header">
+        <h2>Lo que dicen los clientes</h2>
+        <p>
+          Reseñas destacadas de visitantes que recomiendan la comida, el café de olla,
+          las tortillas hechas a mano y el ambiente familiar.
+        </p>
+      </div>
+
+      <div class="reviews">
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Soy cliente frecuente por su comida deliciosa. Me encantan las cortesías al inicio.”</p>
+          <strong>Arely Resendiz</strong>
+        </article>
+
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Me encanta la comida, en especial los chiles en nogada. La atención es muy buena.”</p>
+          <strong>Cinthia Itzel</strong>
+        </article>
+
+        <article class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Gran variedad de alimentos, desayunos, comidas, menú infantil y postres. Todo delicioso.”</p>
+          <strong>Dam Cova</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <div class="location">
+        <div class="info-card">
+          <h2>Visítanos</h2>
+
+          <div class="info-item">
+            <span>Dirección</span>
+            Ignacio Allende 2 Coyoacán, Del Carmen, Coyoacán, 04100 Ciudad de México, CDMX
+          </div>
+
+          <div class="info-item">
+            <span>Teléfono</span>
+            <a href="tel:+525555540298">55 5554 0298</a>
+          </div>
+
+          <div class="info-item">
+            <span>Horario</span>
+            Abre a las 9:00 a.m. Consulta horarios actualizados antes de visitar.
+          </div>
+
+          <div class="info-item">
+            <span>Servicios</span>
+            Consumo en el lugar · Para llevar · Entrega a domicilio
+          </div>
+
+          <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="tel:+525555540298">Reservar / llamar</a>
+            <a class="btn btn-outline" href="https://www.facebook.com/search/top?q=el%20morral%20coyoacan" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+
+        <iframe
+          class="map"
+          title="Mapa de El Morral Coyoacán"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Restaurant%20El%20Morral%20Centro%20de%20Coyoacan%20Ignacio%20Allende%202%20Coyoacan&output=embed">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Comida mexicana para disfrutar Coyoacán como se debe.</h2>
+      <p>
+        Ven por un café de olla, quédate por las enchiladas, las tostadas,
+        el chile en nogada y el ambiente familiar.
+      </p>
+      <div class="hero-actions" style="justify-content:center; margin:0;">
+        <a class="btn btn-primary" href="tel:+525555540298">Llamar ahora</a>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+El+Morral+Centro+de+Coyoacan" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          El Morral
+          <small>Centro de Coyoacán</small>
+        </div>
+      </div>
+      <p>© 2026 El Morral Coyoacán. Sitio demo profesional para restaurante mexicano.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    const tabs = document.querySelectorAll(".tab");
+    const cards = document.querySelectorAll(".menu-card");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const category = tab.dataset.category;
+
+        cards.forEach(card => {
+          if (category === "todos" || card.dataset.category === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
